@@ -1,4 +1,5 @@
 import 'package:crypto_geek/screens/market_screen/market_screen.dart';
+import 'package:crypto_geek/screens/widgets/bottom_navigation.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatefulWidget {
@@ -37,7 +38,7 @@ class _SignInState extends State<SignIn> {
             child: ElevatedButton(
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute (
-                  builder: (BuildContext context) => const MarketScreen(),
+                  builder: (BuildContext context) => const BottomNavigation(),
                 ),);
                 // Validate returns true if the form is valid, or false otherwise.
                 if (_formKey.currentState!.validate()) {

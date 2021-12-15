@@ -1,6 +1,7 @@
 import 'package:crypto_geek/screens/account_screen/account_screen.dart';
 import 'package:crypto_geek/screens/market_screen/market_screen.dart';
 import 'package:crypto_geek/screens/my_wallet_screen/my_wallet_screen.dart';
+import 'package:crypto_geek/screens/security_screen/security_screen.dart';
 import 'package:flutter/material.dart';
 
 class HeaderDrawer extends StatelessWidget {
@@ -48,7 +49,9 @@ class HeaderDrawer extends StatelessWidget {
             title: const Text('Security'),
             leading: Icon(Icons.security),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute (
+                builder: (BuildContext context) => const SecurityScreen(),
+              ),);
             },
           ),
           ListTile(
