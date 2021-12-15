@@ -36,9 +36,11 @@ class EntryScreen extends StatelessWidget {
           ),
           SizedBox(height: 20.0,),
           ElevatedButton(
-              onPressed: (){Navigator.push(context, MaterialPageRoute (
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute (
                 builder: (BuildContext context) => const AuthenticationScreen(),
-              ),);},
+              ),);
+                },
               child: Text("GET STARTED")
           ),
           SizedBox(height: 100.0,),

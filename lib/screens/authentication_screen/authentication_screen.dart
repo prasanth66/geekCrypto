@@ -1,3 +1,5 @@
+import 'package:crypto_geek/screens/authentication_screen/sign_in.dart';
+import 'package:crypto_geek/screens/authentication_screen/sign_up.dart';
 import 'package:flutter/material.dart';
 
 class AuthenticationScreen extends StatefulWidget {
@@ -29,7 +31,8 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
         ),
         body: TabBarView(
           children: [
-
+            SignUp(),
+            SignIn()
           ],
         ),
       ),
