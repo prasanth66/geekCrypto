@@ -1,5 +1,6 @@
 import 'package:crypto_geek/screens/account_screen/account_screen.dart';
 import 'package:crypto_geek/screens/market_screen/market_screen.dart';
+import 'package:crypto_geek/screens/my_wallet_screen/my_wallet_screen.dart';
 import 'package:flutter/material.dart';
 
 class HeaderDrawer extends StatelessWidget {
@@ -38,7 +39,9 @@ class HeaderDrawer extends StatelessWidget {
             title: const Text('My Wallet'),
             leading: Icon(Icons.account_balance_wallet_rounded),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute (
+                builder: (BuildContext context) => const MyWalletScreen(),
+              ),);
             },
           ),
           ListTile(
