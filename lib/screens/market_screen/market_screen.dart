@@ -1,4 +1,5 @@
 import 'package:crypto_geek/screens/market_screen/status_chart.dart';
+import 'package:crypto_geek/screens/widgets/header_drawer.dart';
 import 'package:flutter/material.dart';
 
 import 'balence.dart';
@@ -18,7 +19,6 @@ class _MarketScreenState extends State<MarketScreen> {
       appBar: AppBar(
         title: Text("Market"),
         centerTitle: true,
-        leading: Icon(Icons.menu),
         actions: [
           Icon(Icons.notifications),
           Icon(Icons.face),
@@ -31,6 +31,7 @@ class _MarketScreenState extends State<MarketScreen> {
           Expanded(child: CryptoList()),
         ],
       ),
+      drawer: HeaderDrawer(),
     );
   }
 }
