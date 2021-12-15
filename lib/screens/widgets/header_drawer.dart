@@ -1,3 +1,5 @@
+import 'package:crypto_geek/screens/account_screen/account_screen.dart';
+import 'package:crypto_geek/screens/market_screen/market_screen.dart';
 import 'package:flutter/material.dart';
 
 class HeaderDrawer extends StatelessWidget {
@@ -16,48 +18,60 @@ class HeaderDrawer extends StatelessWidget {
     ),
           ListTile(
             title: const Text('Home'),
+            leading: Icon(Icons.home),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute (
+                builder: (BuildContext context) => const MarketScreen(),
+              ),);
             },
           ),
           ListTile(
             title: const Text('Account'),
+            leading: Icon(Icons.account_balance),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute (
+                builder: (BuildContext context) => const AccountScreen(),
+              ),);
             },
           ),
           ListTile(
             title: const Text('My Wallet'),
+            leading: Icon(Icons.account_balance_wallet_rounded),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           ListTile(
             title: const Text('Security'),
+            leading: Icon(Icons.security),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           ListTile(
             title: const Text('Refer a friend'),
+            leading: Icon(Icons.account_circle_sharp),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           ListTile(
             title: const Text('Settings'),
+            leading: Icon(Icons.settings),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           ListTile(
             title: const Text('Help'),
+            leading: Icon(Icons.help),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           ListTile(
             title: const Text('Sign Out'),
+            leading: Icon(Icons.logout),
             onTap: () {
               Navigator.pop(context);
             },
