@@ -1,3 +1,4 @@
+import 'package:crypto_geek/screens/authentication_screen/authentication_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:card_swiper/card_swiper.dart';
 
@@ -35,7 +36,9 @@ class EntryScreen extends StatelessWidget {
           ),
           SizedBox(height: 20.0,),
           ElevatedButton(
-              onPressed: (){},
+              onPressed: (){Navigator.push(context, MaterialPageRoute (
+                builder: (BuildContext context) => const AuthenticationScreen(),
+              ),);},
               child: Text("GET STARTED")
           ),
           SizedBox(height: 100.0,),

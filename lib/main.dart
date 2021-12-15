@@ -1,5 +1,6 @@
-import 'package:crypto_geek/screens/entryScreen/entryScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:crypto_geek/screens/entry_screen/entry_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'cryptoGeek',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
 
       home:  EntryScreen(),
