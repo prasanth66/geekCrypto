@@ -1,4 +1,8 @@
+import 'package:crypto_geek/screens/entry_screen/entry_screen.dart';
+import 'package:crypto_geek/screens/funds_screen/funds_screen.dart';
 import 'package:crypto_geek/screens/market_screen/market_screen.dart';
+import 'package:crypto_geek/screens/news_screen/news_screen.dart';
+import 'package:crypto_geek/screens/trade_screen/trade_screen.dart';
 import 'package:flutter/material.dart';
 
 
@@ -13,8 +17,9 @@ class _BottomNavigationState extends State<BottomNavigation> {
   int _selectedIndex = 0;
   List tabs = [
     MarketScreen(),
-    MarketScreen(),
-    MarketScreen(),
+    TradeScreen(),
+    FundsScreen(),
+    NewsScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -34,16 +39,20 @@ class _BottomNavigationState extends State<BottomNavigation> {
         onTap: _onItemTapped,
         items:  <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.call),
-            label: 'Calls',
+            icon: Icon(Icons.laptop_windows_sharp),
+            label: 'Market',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.camera),
-            label: 'Camera',
+            icon: Icon(Icons.show_chart_sharp),
+            label: 'Trade',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.chat),
-            label: 'Chats',
+            icon: Icon(Icons.monetization_on),
+            label: 'Funds',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.vpn_lock_sharp),
+            label: 'News',
           ),
         ],
       ),
