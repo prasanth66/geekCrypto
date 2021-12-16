@@ -37,9 +37,8 @@ class _SignInState extends State<SignIn> {
             padding: const EdgeInsets.symmetric(vertical: 16.0),
             child: ElevatedButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute (
-                  builder: (BuildContext context) => const BottomNavigation(),
-                ),);
+                Navigator.of(context).pushNamed('/bottomNavigation');
+
                 // Validate returns true if the form is valid, or false otherwise.
                 if (_formKey.currentState!.validate()) {
                   ScaffoldMessenger.of(context).showSnackBar(

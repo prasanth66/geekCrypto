@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:crypto_geek/screens/entry_screen/entry_screen.dart';
 
+import 'config/routes.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -16,8 +18,8 @@ class MyApp extends StatelessWidget {
       title: 'cryptoGeek',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-
-      home:  EntryScreen(),
+      initialRoute:  '/',
+      onGenerateRoute: Routes.generateRoute,
     );
   }
 }

@@ -16,8 +16,8 @@ class EntryScreen extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(height: 100.0,),
-          Text(
-            "WELECOME TO ""CRYPTO GEEK",
+          const Text(
+            "WELCOME TO CRYPTO GEEK",
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 25
